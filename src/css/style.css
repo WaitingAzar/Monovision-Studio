@@ -89,7 +89,7 @@ html {
 	padding-top: 75px;
 	@media screen and (max-width: 768px) {
 		& {
-			background-image: url("../img/bg.png");
+			background-image: url("../img/Bg.png");
 		}
 	}
 	@media screen and (max-width: 576px) {
