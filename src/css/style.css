@@ -186,18 +186,22 @@ html {
 	@media screen and (max-width: 768px) {
 		& {
 			margin-top: 80px;
+			text-decoration: none;
 		}
 		&::before {
 			left: -40px;
+			text-decoration: none;
 		}
 	}
 	@media screen and (max-width: 750px) {
 		&::before {
 			display: none;
+			text-decoration: none;
 		}
 	}
 	@media screen and (max-width: 576px) {
 		margin-top: 233px;
+		text-decoration: none;
 	}
 }
 
