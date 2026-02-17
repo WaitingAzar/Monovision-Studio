@@ -1,0 +1,24 @@
+name: Move files from src to root
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  move-files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Move files
+        run: |
+          mv src/* ./
+          rm -rf src
+          
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add .
+          git commit -m "Auto move files from src to root" || exit 0
+          git push
